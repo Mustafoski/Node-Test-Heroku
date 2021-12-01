@@ -4,6 +4,9 @@
   "description": "node-course",
   "main": "fibonacci.js",
   "scripts": {
+    "test:watch":"npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --watch",
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register",
+    "coverage":"nyc --reporter=lcov --reporter=text npm run test",
     "start": "node hosted-server.js",
     "say-hello": "node ./hello-world.js"
   },
@@ -30,6 +33,10 @@
     "@babel/core": "^7.15.8",
     "@babel/node": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "nodemon": "^2.0.14"
+    "@babel/register": "^7.16.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "nodemon": "^2.0.14",
+    "supertest": "^6.1.6"
   }
 }
