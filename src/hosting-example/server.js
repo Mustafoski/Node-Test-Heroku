@@ -13,3 +13,7 @@ app.listen(PORT, () => console.log(`App is listening on port ${PORT}`));
 //     "node": "14.x"
 //   },
 // --remove .lock files
+
+// git add .
+// git commit -m "some commit"
+// git push heroku master
